@@ -1,0 +1,31 @@
+server:
+   port: 9527
+spring:
+  profiles:
+    active: @spring.profiles.active@
+  mvc:
+    locale: zh_CN
+    date-format: yyyy-MM-dd
+  jackson:
+    serialization:
+      indent-output: true
+info:
+  build:
+    artifact: @project.artifactId@
+    name: @project.name@
+    description: @project.description@
+    version: @project.version@
+management:
+  context-path: /manage
+security:
+  basic:
+    enabled: false
+logging:
+  file: xunli-manager.log
+  level:
+    org.hibernate: WARN
+    org.springframework: INFO
+    io.swagger: WARN
+app:
+  work:
+    directory: target/work
